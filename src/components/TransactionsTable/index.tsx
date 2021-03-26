@@ -8,12 +8,18 @@ export function TransactionTable() {
     <Container>
       <table>
         <thead>
-          <tr>
-            <th>Título</th>
-            <th>Value</th>
-            <th>Category</th>
-            <th>Date</th>
-          </tr>
+          {
+            transactions.length !== 0 ? (
+              <tr>
+                <th>Título</th>
+                <th>Value</th>
+                <th>Category</th>
+                <th>Date</th>
+              </tr>
+            ) : (
+              ""
+            )
+          }
         </thead>
         <tbody>
           {transactions.map(transaction => {
