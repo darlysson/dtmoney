@@ -36,7 +36,7 @@ export function TransactionsProvider({ children }: TransactionProviderProps) {
       ...transactionInput,
       createdAt: new Date()
     });
-    
+
     const { transaction } = response.data;
 
     setTransactions([
@@ -47,7 +47,7 @@ export function TransactionsProvider({ children }: TransactionProviderProps) {
 
   return (
     <TransactionsContext.Provider value={{ transactions, createTransaction }}>
-      { children}
+      {children}
     </TransactionsContext.Provider>
   )
 }
